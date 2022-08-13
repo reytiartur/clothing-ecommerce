@@ -26,7 +26,7 @@ const SignUpForm = () => {
         event.preventDefault()
         if(password !== confirmPassword) {
             alert("passwords do not match");
-            return
+            return;
         }
 
         try {
@@ -58,7 +58,7 @@ const SignUpForm = () => {
 
                 <FormInput label="Password" type="password" required name="password" onChange={ handleChange } value={ password } />
 
-                <FormInput label="Confirm Password" type="password" required name="confirmPassword" onChange={ handleChange } value = { confirmPassword } />
+                <FormInput label="Confirm Password" type="password" required name="confirmPassword" onChange={ handleChange } value={ confirmPassword } />
                 <Button type="submit">Sign Up</Button>
             </form>
         </div>
