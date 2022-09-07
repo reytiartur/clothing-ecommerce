@@ -9,7 +9,8 @@
     background-color: white; 
     top: 90px; 
     right: 40px; 
-    z-index: 5; 
+    z-index: 5;
+    box-sizing: content-box;
     
     .empty-message { 
         font-size: 18px; 
@@ -20,7 +21,23 @@
         height: 240px; 
         display: flex; 
         flex-direction: column; 
-        overflow: scroll; 
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            border-radius: 10px;
+            height: 10px;
+            width: 8px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: #999;
+            border-radius: 10px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }      
     } 
     
     button { 
